@@ -8,3 +8,4 @@ Things you may want to cover:
 * Rails version 5.1.6
 
 * Database initialization: run rake db:migrate
+"# pixdream" 
