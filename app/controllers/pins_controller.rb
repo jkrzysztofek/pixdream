@@ -78,4 +78,6 @@ class PinsController < ApplicationController
       @pin = current_user.pins.find_by(id: params[:id])
       redirect_to pins_path, notice: "Nie jesteś uprawiony do edycji tego pinu" if @pin.nil?
     end
+
+    
 end
