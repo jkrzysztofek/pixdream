@@ -1,22 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+
   <strong>Description:</strong>
   <%= @pin.description %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <br>
+  <%= image_tag @pin.image %>
+</p>
+
 <% if @pin.user == current_user %>
   <%= link_to 'Edit', edit_pin_path(@pin) %>
+  <%= link_to 'Destroy', @pin, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
+
+
+
+
 <%= link_to 'Back', pins_path %>
 
 <% if @pin.image.attached? %>
 
 
 <!-- @post.image.present? will always return true, use attached? to check presence -->
-  <p>
-    <strong>Image:</strong>
-    <br>
-    <%= image_tag @pin.image %>
-  </p>
+
 <% end %>

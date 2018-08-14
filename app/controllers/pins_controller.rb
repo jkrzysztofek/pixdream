@@ -79,5 +79,5 @@ class PinsController < ApplicationController
       redirect_to pins_path, notice: "Nie jesteś uprawiony do edycji tego pinu" if @pin.nil?
     end
 
-    
+
 end
