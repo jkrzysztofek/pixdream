@@ -1,42 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Pins</h1>
-
 <div class="jumbotron">
   <p>Miniatury pinów tutaj</p>
-  <tbody>
-    <% @pins.each do |pin| %>
-      <tr>
-        <td><%= image_tag url_for (pin.image)%> </td>
-        <td><%= pin.description %></td>
-        <td><%= link_to 'Show', pin %></td>
 
-      </tr>
-    <% end %>
-  </tbody>
-</div>
-
-<table>
-  <thead>
-    <tr>
-      <th>Add new pin</th><br/>
-      <th><%= link_to 'New Pin', new_pin_path %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-
-<!--
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
   <div class="box">
-    <%= image_tag url_for (pin.image)%>
-    <%= pin.description %><br/>
+    <div class="panel panel-default">
+      <%= image_tag url_for (pin.image) %></br>
+      <div class ="panel-body">
+        <%= pin.description %><br/>
+      </div>
+
     <% if pin.user == current_user %>
-      <%= link_to 'Edit', edit_pin_path(@pin) %>
-      <%= link_to 'Destroy', @pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <div class="panel-footer">
+        <%= link_to 'Edytuj', edit_pin_path(pin) %> <br/>
+        <%= link_to 'Usuń', @pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     <% end %>
+    </div>
   </div>
   <% end %>
-  <%= link_to 'New Pin', new_pin_path %>
-</div>-->
+</div>
+  <br/>
+
+  <%= link_to 'New Pin', new_pin_path, class: 'btn btn-primary' %>
+</div>
