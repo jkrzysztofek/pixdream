@@ -1,58 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Pins</h1>
-<div class="jumbotron">
-  <p>Miniatury pinów tutaj</p>
-
-<div id="pins" class="transitions-enabled">
-  <% @pins.each do |pin| %>
-  <div class="box">
-    <div class="panel panel-default">
-      <%= image_tag url_for (pin.image) %></br>
-      <div class ="panel-body">
-        <%= pin.description %><br/>
-      </div>
-
-    <% if pin.user == current_user %>
-      <div class="panel-footer">
-        <%= link_to 'Edytuj', edit_pin_path(pin) %> <br/>
-        <%= link_to 'Usuń', @pin, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
-    <% end %>
-    </div>
-  </div>
-  <% end %>
-</div>
-  <br/>
-
-  <%= link_to 'New Pin', new_pin_path, class: 'btn btn-primary' %>
-</div>
-
 
 <div class="continer">
   <div class="jumbotron">
     <p>Miniatury pinów tutaj</p>
     <div class="row">
-      <div class="col-lg-4">
-        <div class="thumbnail">
-          <% @pins.each do |pin| %>
-          <%= image_tag url_for (pin.image) %></br>
-          <%= pin.description %><br/>
-          <%= link_to 'Show', pin %>
-          <% if pin.user == current_user %>
-              <%= link_to 'Edytuj', edit_pin_path(pin) %> <br/>
-              <%= link_to 'Usuń', @pin, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
-          <% end %>
-        </div>
-      </div>
+
+        <% @pins.each do |pin| %>
+          <div class="col-lg-4">
+            <div class="thumbnail">
+              <%= image_tag url_for (pin.image) %></br>
+              <%= pin.description %><br/>
+              <%= link_to 'Show', pin %>
+              <% if pin.user == current_user %>
+                  <%= link_to 'Edytuj', edit_pin_path(pin) %> <br/>
+                  <%= link_to 'Usuń', pin_path(pin), method: :delete, data: { confirm: 'Are you sure?' } %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
     </div>
 
     <br/>
     <%= link_to 'New Pin', new_pin_path, class: 'btn btn-primary' %>
-
   </div>
-
-
-
 </div>
