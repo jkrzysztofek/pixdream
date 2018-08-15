@@ -38,7 +38,7 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'masonry-rails', '~> 0.2.4'
-gem 'jquery-turbolinks'
+gem 'jquery-turbolinks', '~> 2.1'
 
 
 group :development, :test do

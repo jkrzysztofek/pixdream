@@ -219,7 +219,7 @@ DEPENDENCIES
   devise (~> 4.4, >= 4.4.3)
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3, >= 4.3.3)
-  jquery-turbolinks
+  jquery-turbolinks (~> 2.1)
   masonry-rails (~> 0.2.4)
   pry
   puma (~> 3.7)
