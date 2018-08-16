@@ -5,6 +5,8 @@
 <div class="continer">
   <div class="jumbotron">
     <p>Miniatury pinów tutaj</p>
+    <%= link_to 'New Pin', new_pin_path, class: 'btn btn-primary' %> <br/><br/>
+
     <div class="row">
 
         <% @pins.each do |pin| %>
@@ -18,13 +20,9 @@
             </div>
           </div>
         <% end %>
-
-
-
-
     </div>
-
-    <br/>
-    <%= link_to 'New Pin', new_pin_path, class: 'btn btn-primary' %>
   </div>
+</div>
+<div class="center">
+  <%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
 </div>

@@ -7,7 +7,7 @@ class PinsController < ApplicationController
   # GET /pins.json
   def index
     @q = Pin.order("created_at DESC").ransack(params[:q])
-    @pins = @q.result(distinct: true)
+    @pins = @q.result(distinct: true).paginate(:page => params[:page], :per_page => 9)
   end
 
   # GET /pins/1
