@@ -6,7 +6,8 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.all.order("created_at DESC")
+    @q = Pin.order("created_at DESC").ransack(params[:q])
+    @pins = @q.result(distinct: true)
   end
 
   # GET /pins/1
@@ -56,7 +57,6 @@ class PinsController < ApplicationController
   # DELETE /pins/1
   # DELETE /pins/1.json
   def destroy
-    binding.pry
     @pin.destroy
     respond_to do |format|
       format.html { redirect_to pins_url, notice: 'Pin was successfully destroyed.' }
