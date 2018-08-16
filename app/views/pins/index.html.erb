@@ -14,9 +14,11 @@
         <% @pins.each do |pin| %>
           <div class="col-lg-4">
             <div class="thumbnail">
-              <%= image_tag url_for (pin.image) %></br>
+              </br>
               <%= pin.description %><br/>
-              <%= link_to 'Show', pin, class: 'btn btn-primary btn-sm'%>
+              <%= link_to pin_path(pin) do %>
+                <%= image_tag url_for (pin.image) %>
+              <% end %>
             </div>
           </div>
         <% end %>
