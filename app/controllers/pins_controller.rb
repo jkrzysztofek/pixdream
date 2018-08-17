@@ -64,6 +64,15 @@ class PinsController < ApplicationController
     end
   end
 
+  def clone
+    @newpin = Pin.new
+    @newpin.description = @pin.description
+    @newpin.image = @pin.image_tag
+    @newpin.user = current_user
+    @newpin.save
+    render :show, status: :ok, location: @newpin
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pin
