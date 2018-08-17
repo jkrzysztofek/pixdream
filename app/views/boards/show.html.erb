@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Opis:</strong>
+  <%= @board.description %>
+</p>
+
+<p>
+  <strong>Obrazy w tablicy:</strong>
+</p>
+
+<p>
+  <%= link_to 'Edit', edit_board_path(@board), class: 'btn btn-primary btn-sm' %>
+  <%= link_to 'Destroy', @board, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary btn-sm' %>
+  <%= link_to 'Back', boards_path, class: 'btn btn-primary btn-sm'%>
+</p>
+
+
+<div class="continer">
+  <div class="jumbotron">
+    <p>Miniatury pinów tutaj</p>
+    <%= link_to 'New Pin', new_pin_path, class: 'btn btn-primary' %> <br/><br/>
+
+    <div class="row">
+        <% @board_pins.each do |board_pin| %>
+          <div class="col-lg-4">
+            <div class="thumbnail">
+              </br>
+              <%= board_pin.description %><br/>
+              <%= link_to pin_path(board_pin) do %>
+                <%= image_tag url_for (board_pin.image) %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
+<div class="center">
+  <%= will_paginate @board_pins, renderer: BootstrapPagination::Rails %>
+</div>

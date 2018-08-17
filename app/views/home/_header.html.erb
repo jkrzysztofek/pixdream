@@ -30,7 +30,10 @@
         <li><%= link_to 'O mnie', home_about_path %></li>
         <li><%= link_to 'Lista pinów', pins_path %></li>
 
+
+
         <% if user_signed_in? %>
+        <li><%= link_to 'Moje tablice', boards_path %></li>
         <li><%= link_to 'Edycja profilu', edit_user_registration_path %></li>
         <li><%= link_to 'Wylogowanie', destroy_user_session_path, method: :delete %></li>
         <% else %>

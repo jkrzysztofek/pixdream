@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_13_133328) do
+ActiveRecord::Schema.define(version: 2018_08_17_094820) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(version: 2018_08_13_133328) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "boards", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_boards_on_user_id"
+  end
+
   create_table "pins", force: :cascade do |t|
     t.string "description"
     t.datetime "created_at", null: false
@@ -42,6 +51,8 @@ ActiveRecord::Schema.define(version: 2018_08_13_133328) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+    t.integer "board_id"
+    t.index ["board_id"], name: "index_pins_on_board_id"
     t.index ["user_id"], name: "index_pins_on_user_id"
   end
 
