@@ -13,14 +13,14 @@
 </p>
 
 <% if @pin.user == current_user %>
-  <%= link_to 'Edit', edit_pin_path(@pin), class: 'btn btn-primary btn-sm' %>
-  <%= link_to 'Destroy', @pin, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary btn-sm' %>
+  <%= link_to 'Edytuj', edit_pin_path(@pin), class: 'btn btn-primary btn-sm' %>
+  <%= link_to 'Usuń', @pin, method: :delete, data: { confirm: 'Czy na pewno usunąć?' }, class: 'btn btn-primary btn-sm' %>
 <% end %>
 
 
 
 
-<%= link_to 'Back', pins_path, class: 'btn btn-primary btn-sm'%>
+<%= link_to 'Powrót', pins_path, class: 'btn btn-primary btn-sm'%>
 <br/>
 <br/>
 <br/>
