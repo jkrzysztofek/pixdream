@@ -4,12 +4,12 @@
 
 <div class="continer">
   <div class="jumbotron">
-    <p>Miniatury pinów tutaj</p>
+    <p>***</p>
     <%= link_to 'Dodaj obrazek', new_pin_path, class: 'btn btn-primary' %> <br/><br/>
 
     <div class="row">
         <% @pins.each do |pin| %>
-          <div class="col-md-4">
+          <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
               </br>
               <%= pin.description %><br/>

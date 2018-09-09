@@ -18,12 +18,12 @@
 
 <div class="continer">
   <div class="jumbotron">
-    <p>Miniatury pinów tutaj</p>
+    <p>Opis do galerii</p>
     <%= link_to 'Dodaj', new_pin_path, class: 'btn btn-primary' %> <br/><br/>
 
     <div class="row">
         <% @board_pins.each do |board_pin| %>
-          <div class="col-lg-4">
+          <div class="col-md-4">
             <div class="thumbnail">
               </br>
               <%= board_pin.description %><br/>

@@ -7,11 +7,11 @@
 
     <%= link_to 'Nowa tablica', new_board_path, class: 'btn btn-primary' %> <br/><br/>
 
-    <p> Miniatury tablic tutaj </p>
+    <p>***</p>
 
     <div class="row">
       <% @boards.each do |board| %>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-md-4">
           <div class="thumbnail">
             <div class="caption">
               <h3><%=board.name %></h3>
