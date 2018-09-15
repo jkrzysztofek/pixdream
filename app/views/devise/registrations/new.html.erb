@@ -11,9 +11,9 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :hasło %>
+    <%= f.label :password, "Hasło" %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <em>(minimum <%= @minimum_password_length %> znaków)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off", class:'form-control' %>
   </div>
@@ -23,6 +23,6 @@
   </div>
 <% end %>
 
-  </div>
-    <div class="panel-footer"><%= render "devise/shared/links" %></div>
+</div>
+  <div class="panel-footer"><%= render "devise/shared/links" %></div>
 </div>

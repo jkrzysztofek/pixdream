@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-  <div class="panel-heading"><h2>Zaloguj się</h2></div>
+  <div class="panel-heading"><h2>Logowanie</h2></div>
   <div class="panel-body">
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -9,14 +9,14 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :hasło %><br />
+    <%= f.label :password, "Hasło" %><br />
     <%= f.password_field :password, autocomplete: "off", class:'form-control' %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
     <div class="form-group">
       <%= f.check_box :remember_me %>
-      <%= f.label :zapamiętaj_hasło %>
+      <%= f.label :remember_me, "Zapamiętaj mnie" %>
     </div>
   <% end -%>
 

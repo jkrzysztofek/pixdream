@@ -31,7 +31,7 @@ class PinsController < ApplicationController
 
     respond_to do |format|
       if @pin.save
-        format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
+        format.html { redirect_to @pin, notice: 'Obraz został pomyślnie dodany.' }
         format.json { render :show, status: :created, location: @pin }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class PinsController < ApplicationController
   def update
     respond_to do |format|
       if @pin.update(pin_params)
-        format.html { redirect_to @pin, notice: 'Obrazek został zmieniony' }
+        format.html { redirect_to @pin, notice: 'Obraz został pomyślnie zmieniony' }
         format.json { render :show, status: :ok, location: @pin }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class PinsController < ApplicationController
   def destroy
     @pin.destroy
     respond_to do |format|
-      format.html { redirect_to pins_url, notice: 'Pin został usunięty.' }
+      format.html { redirect_to pins_url, notice: 'Obraz został usunięty pomyślnie.' }
       format.json { head :no_content }
     end
   end
