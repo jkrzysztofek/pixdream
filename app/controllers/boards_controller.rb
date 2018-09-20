@@ -35,7 +35,7 @@ class BoardsController < ApplicationController
 
     respond_to do |format|
       if @board.save
-        format.html { redirect_to @board, notice: 'Board was successfully created.' }
+        format.html { redirect_to @board, notice: 'Tablica została pomyślnie dodana.' }
         format.json { render :show, status: :created, location: @board }
       else
         format.html { render :new }
@@ -49,7 +49,7 @@ class BoardsController < ApplicationController
   def update
     respond_to do |format|
       if @board.update(board_params)
-        format.html { redirect_to @board, notice: 'Board was successfully updated.' }
+        format.html { redirect_to @board, notice: 'Tablica została pomyślnie zmieniona' }
         format.json { render :show, status: :ok, location: @board }
       else
         format.html { render :edit }
@@ -63,7 +63,7 @@ class BoardsController < ApplicationController
   def destroy
     @board.destroy
     respond_to do |format|
-      format.html { redirect_to boards_url, notice: 'Board was successfully destroyed.' }
+      format.html { redirect_to boards_url, notice: 'Tablica została pomyślnie usunięta.' }
       format.json { head :no_content }
     end
   end

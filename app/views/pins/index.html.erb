@@ -11,8 +11,8 @@
         <% @pins.each do |pin| %>
           <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-              </br>
-              <%= pin.description %><br/>
+              <br />
+              <div class="description"><%= pin.description %></div><br/>
               <%= link_to pin_path(pin) do %>
                 <%= image_tag url_for (pin.image) %>
               <% end %>
@@ -23,5 +23,5 @@
   </div>
 </div>
 <div class="center">
-  <%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
+  <%= will_paginate @pins, :previous_label => 'Poprzednia strona', :next_label => "Następna strona", renderer: BootstrapPagination::Rails %>
 </div>
