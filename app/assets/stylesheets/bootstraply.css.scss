@@ -20,7 +20,7 @@
     padding: 6px 12px;
     line-height: 1.428571429;
     text-decoration: none;
-    color: #393e42;
+    color: #828282;
     background-color: #fff;
     border: 1px solid #ddd;
     margin-left: -1px;
@@ -31,28 +31,28 @@
   a {
     z-index: 3;
     color: #fff;
-    background-color: #343738;
-    border-color: #484b4e;
+    background-color: #828282;
+    border-color: #AAA8B3;
     cursor: default;
     &:hover, &:focus {
       z-index: 3;
       color: #fff;
-      background-color: #313335;
-      border-color: #383a3b;
+      background-color: #828282;
+      border-color: #AAA8B3;
       cursor: default;
     }
   }
   span {
     z-index: 3;
     color: #fff;
-    background-color: #3c4044;
-    border-color: #3d4042;
+    background-color: #828282;
+    border-color: #AAA8B3;
     cursor: default;
     &:hover, &:focus {
       z-index: 3;
       color: #fff;
-      background-color: #3f3f3f;
-      border-color: #37383a;
+      background-color: #828282;
+      border-color:#AAA8B3;
       cursor: default;
     }
   }
