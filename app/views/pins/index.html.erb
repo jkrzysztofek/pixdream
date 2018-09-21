@@ -2,25 +2,8 @@
 
 <h1>Galeria obrazów</h1>
 
-<div class="continer">
-  <div class="jumbotron">
     <p>***</p>
     <%= link_to 'Dodaj obrazek', new_pin_path, class: 'btn btn-primary' %> <br/><br/>
-
-    <!--<div class="row">
-        <% @pins.each do |pin| %>
-          <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-              <br />
-              <div class="description"><%= pin.description %></div><br/>
-              <%= link_to pin_path(pin) do %>
-                <%= image_tag url_for (pin.image) %>
-              <% end %>
-            </div>
-          </div>
-        <% end %>
-    </div>-->
-
     <div class="masonry">
         <% @pins.each do |pin| %>
           <div class="item">
@@ -31,8 +14,6 @@
         <% end %>
     </div>
     
-  </div>
-</div>
 <div class="center">
   <%= will_paginate @pins, :previous_label => 'Poprzednia strona', :next_label => "Następna strona", renderer: BootstrapPagination::Rails %>
 </div>
