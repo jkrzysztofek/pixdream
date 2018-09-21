@@ -28,5 +28,4 @@
 
 
 <div class="center">
-  <%= will_paginate @boards, renderer: BootstrapPagination::Rails %>
-</div>
+ <%= will_paginate @boards, :previous_label => 'Poprzednia strona', :next_label => "Następna strona", renderer: BootstrapPagination::Rails %></div>

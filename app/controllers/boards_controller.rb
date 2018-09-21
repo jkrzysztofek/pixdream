@@ -1,22 +1,22 @@
 class BoardsController < ApplicationController
-  before_action :set_board, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :set_board, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[index show]
+  before_action :correct_user, only: %i[edit update destroy]
 
   # GET /boards
   # GET /boards.json
   def index
     @boards = current_user.boards
-                          .order("created_at DESC")
-                          .paginate(:page => params[:page], :per_page => 9)
+                          .order('created_at DESC')
+                          .paginate(page: params[:page], per_page: 9)
   end
 
   # GET /boards/1
   # GET /pboards/1.json
   def show
     @board_pins = @board.pins
-                        .order("created_at DESC")
-                        .paginate(:page => params[:page], :per_page => 9)
+                        .order('created_at DESC')
+                        .paginate(page: params[:page], per_page: 9)
   end
 
   # GET /boards/new
@@ -25,8 +25,7 @@ class BoardsController < ApplicationController
   end
 
   # GET /boards/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /boards
   # POST /boards.json
@@ -69,20 +68,19 @@ class BoardsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_board
-      @board = Board.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def board_params
-      params.require(:board).permit(:description, :name, :image)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_board
+    @board = Board.find(params[:id])
+  end
 
-    def correct_user
-      @board = current_user.boards.find_by(id: params[:id])
-      redirect_to boards_path, notice: "Nie jesteś uprawiony do edycji tej tablicy" if @board.nil?
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def board_params
+    params.require(:board).permit(:description, :name, :image)
+  end
 
-
+  def correct_user
+    @board = current_user.boards.find_by(id: params[:id])
+    redirect_to boards_path, notice: 'Nie jesteś uprawiony do edycji tej tablicy' if @board.nil?
+  end
 end

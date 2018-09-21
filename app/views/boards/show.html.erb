@@ -24,8 +24,8 @@
     <div class="row">
         <% @board_pins.each do |board_pin| %>
           <div class="col-md-4">
-            <div class="thumbnail">
-              </br>
+            <div class="thumbnail-boards">
+              <br />
               <%= board_pin.description %><br/>
               <%= link_to pin_path(board_pin) do %>
                 <%= image_tag url_for (board_pin.image) %>

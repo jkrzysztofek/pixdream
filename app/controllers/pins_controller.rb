@@ -1,19 +1,18 @@
 class PinsController < ApplicationController
-  before_action :set_pin, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :set_pin, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[index show]
+  before_action :correct_user, only: %i[edit update destroy]
 
   # GET /pins
   # GET /pins.json
   def index
-    @q = Pin.order("created_at DESC").ransack(params[:q])
-    @pins = @q.result(distinct: true).paginate(:page => params[:page], :per_page => 9)
+    @q = Pin.order('created_at DESC').ransack(params[:q])
+    @pins = @q.result(distinct: true).paginate(page: params[:page], per_page: 9)
   end
 
   # GET /pins/1
   # GET /pins/1.json
-  def show
-  end
+  def show; end
 
   # GET /pins/new
   def new
@@ -21,8 +20,7 @@ class PinsController < ApplicationController
   end
 
   # GET /pins/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /pins
   # POST /pins.json
@@ -74,20 +72,19 @@ class PinsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_pin
-      @pin = Pin.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def pin_params
-      params.require(:pin).permit(:description, :image, :board_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_pin
+    @pin = Pin.find(params[:id])
+  end
 
-    def correct_user
-      @pin = current_user.pins.find_by(id: params[:id])
-      redirect_to pins_path, notice: "Nie jesteś uprawiony do edycji tego pinu" if @pin.nil?
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def pin_params
+    params.require(:pin).permit(:description, :image, :board_id)
+  end
 
-
+  def correct_user
+    @pin = current_user.pins.find_by(id: params[:id])
+    redirect_to pins_path, notice: 'Nie jesteś uprawiony do edycji tego pinu' if @pin.nil?
+  end
 end

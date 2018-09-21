@@ -7,7 +7,7 @@
     <p>***</p>
     <%= link_to 'Dodaj obrazek', new_pin_path, class: 'btn btn-primary' %> <br/><br/>
 
-    <div class="row">
+    <!--<div class="row">
         <% @pins.each do |pin| %>
           <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
@@ -19,7 +19,18 @@
             </div>
           </div>
         <% end %>
+    </div>-->
+
+    <div class="masonry">
+        <% @pins.each do |pin| %>
+          <div class="item">
+              <%= link_to pin_path(pin) do %>
+                <%= image_tag url_for (pin.image) %>
+              <% end %>
+          </div>
+        <% end %>
     </div>
+    
   </div>
 </div>
 <div class="center">
