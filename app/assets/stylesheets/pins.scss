@@ -1,0 +1,30 @@
+.masonry {
+    /* Masonry container */
+    column-count: 3;
+    column-gap: 1em;
+  }
+  
+  .item {
+    display: inline-block;
+    background: #ffffff;
+    padding: 1.5em;
+    margin: 0 0 1.5em;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+  }
+  img {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  #show_image{
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+  }
