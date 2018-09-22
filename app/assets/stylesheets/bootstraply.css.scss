@@ -7,6 +7,7 @@
 
 .jumbotron {
    background-color: #ffffff;
+   
 }
 
 .center{
@@ -74,6 +75,7 @@
 .btn:focus, 
 .btn:active, 
 .btn.active, 
+.btn.visited,
 .open .dropdown-toggle.btn { 
   color: #828282; 
   background-color: #DBDBDB; 
@@ -115,3 +117,8 @@ fieldset[disabled] .btn.active {
   background-color: #FFFFFF; 
   border-color: #AAA8B3;       
 }
+
+
+.carousel-control.left, .carousel-control.right { background-image: none; } 
+.carousel-indicators{margin-bottom: 30px;}
+

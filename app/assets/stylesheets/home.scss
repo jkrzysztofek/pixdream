@@ -10,8 +10,20 @@ body {
     color: #00000091;
     margin-bottom: 60px;
 }
+
+a:link,
+a:visited,
+a:active {
+    color: rgb(77, 70, 70);
+}
+
+a:hover {
+    color: rgb(129, 124, 128);
+    text-decoration: none;
+}
+
 h1 {
-    margin-left: 25px;
+    text-align: center ;
 }
 
 .footer {
@@ -26,3 +38,4 @@ h1 {
     width: 100%;
 
   }
+
