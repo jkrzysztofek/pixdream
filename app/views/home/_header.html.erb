@@ -13,8 +13,8 @@
 
     <form class="navbar-form navbar-left">
         <div class="form-group">
-          <%= search_form_for Pin.ransack, url: pins_path do |f| %>
-            <%= f.search_field :description_cont, type:"text", class:"form-control", placeholder: "Szukaj po opisie zdjęcia" %>
+          <%= search_form_for @q, url: search_pins_path, html: { method: :post } do |f| %>
+            <%= f.search_field :description_cont, type: "text", class: "form-control", placeholder: "Szukaj po opisie zdjęcia" %>
 
             <%= f.submit 'Szukaj', class:"btn btn-default"%>
           <% end %>
