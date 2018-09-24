@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PinsController < ApplicationController
   before_action :set_pin, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[index show]
@@ -69,6 +71,11 @@ class PinsController < ApplicationController
     @newpin.user = current_user
     @newpin.save
     render :show, status: :ok, location: @newpin
+  end
+
+  def search
+    index
+    render :index
   end
 
   private
