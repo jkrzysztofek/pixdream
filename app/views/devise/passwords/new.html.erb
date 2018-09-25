@@ -1,7 +1,6 @@
 <div class="panel panel-default">
-  <div class="panel-heading"><h2>Zapomniałeś hasła?</h2></div>
+  <div class="panel-heading"><h2>Forgot your password?</h2></div>
   <div class="panel-body">
->
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
@@ -12,7 +11,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Wyślij mi instrukcję resetowania hasła" %>
+    <%= f.submit "Send me reset password instructions" %>
   </div>
 <% end %>
 

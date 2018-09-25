@@ -6,10 +6,6 @@
 </p>
 
 <p>
-  <strong>Obrazy w tablicy:</strong>
-</p>
-
-<p>
   <%= link_to 'Edycja', edit_board_path(@board), class: 'btn btn-primary btn-sm' %>
   <%= link_to 'Usuń', @board, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary btn-sm' %>
   <%= link_to 'Wstecz', boards_path, class: 'btn btn-primary btn-sm'%>
@@ -18,15 +14,16 @@
 
 <div class="continer">
   <div class="jumbotron">
-    <p>Opis do galerii</p>
-    <%= link_to 'Dodaj', new_pin_path, class: 'btn btn-primary' %> <br/><br/>
+    <p class="center">
+      <strong>Obrazy w Twojej tablicy:</strong><br /><br />
+      <%= link_to 'Add image', new_pin_path, class: 'btn btn-primary btn-sm' %> <br/><br/>
+    </p>
 
     <div class="row">
         <% @board_pins.each do |board_pin| %>
           <div class="col-md-4">
             <div class="thumbnail-boards">
               <br />
-              <%= board_pin.description %><br/>
               <%= link_to pin_path(board_pin) do %>
                 <%= image_tag url_for (board_pin.image) %>
               <% end %>

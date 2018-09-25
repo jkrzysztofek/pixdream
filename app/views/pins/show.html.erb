@@ -4,20 +4,20 @@
   <div id="show_image"><%= image_tag @pin.image %>
 </p>
 <p>
-  <strong>Opis:</strong>
+  <strong>Description:</strong>
   <%= @pin.description %>
 </p>
 <br />
 
 <% if @pin.user == current_user %>
-  <%= link_to 'Edycja', edit_pin_path(@pin), class: 'btn btn-primary btn-sm' %>
-  <%= link_to 'Usuń', @pin, method: :delete, data: { confirm: 'Czy na pewno usunąć?' }, class: 'btn btn-primary btn-sm' %>
+  <%= link_to 'Edit', edit_pin_path(@pin), class: 'btn btn-primary btn-sm' %>
+  <%= link_to 'Delete', @pin, method: :delete, data: { confirm: 'Czy na pewno usunąć?' }, class: 'btn btn-primary btn-sm' %>
 <% end %>
 
 
 
 
-<%= link_to 'Wstecz', pins_path, class: 'btn btn-primary btn-sm'%>
+<%= link_to 'Back', pins_path, class: 'btn btn-primary btn-sm'%>
 <br/>
 <br/>
 <br/>

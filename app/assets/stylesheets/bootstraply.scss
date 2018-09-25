@@ -1,6 +1,8 @@
 @import "bootstrap";
 @import "bootstrap-sprockets";
 
+
+// general styles:
 .description {
   text-align: center;
 }
@@ -13,6 +15,7 @@
    padding-right: 0px;
 }
 
+// carousel styles:
  .item {
   width:100%;
   height:100%;
@@ -20,17 +23,34 @@
   padding-top:0px;
 }
 
-.carousel-control.left, .carousel-control.right { background-image: none; } 
-.carousel-indicators{margin-bottom: 30px;}
-
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) { .container {margin-left: 0px; padding: 0px;} .carousel {width:100%; height:100%;} .media-object{ margin-top:0;}  h1 {font-size:14px; } p {font-size:12px; } a.btn {font-size:8px; } }
-
-
-.center{
-  text-align:center;
+.carousel-control.left, .carousel-control.right { 
+  background-image: none; 
+} 
+.carousel-indicators { 
+  margin-bottom: 30px;
 }
 
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 575.98px) { 
+  .container {margin-left: 0px; padding: 0px;} 
+  .carousel {width:100%; height:100%;} 
+  .media-object{ margin-top:0;}  
+  h1 {font-size:14px; } 
+  p {font-size:12px; } 
+  a.btn {font-size:8px; } 
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  .container {margin-left: 0px; padding: 0px;} 
+  .carousel {width:100%; height:100%;} 
+  .media-object{ margin-top:0;}  
+  h1 {font-size:20px; } 
+  p {font-size:18px; } 
+  a.btn {font-size:8px; }
+}
+
+
+// pagination and buttons styles
 .pagination > li > {
   a, span {
     position: relative;

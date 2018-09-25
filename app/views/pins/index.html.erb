@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1 id=>Galeria obrazów</h1>
 <div class="container">
   <div class="jumbotron">
-    <%= link_to 'Dodaj obrazek', new_pin_path, class: 'btn btn-primary' %> <br/><br/>
+    <h2 class="center">Images gallery</h2>
+    <%= link_to 'Add image', new_pin_path, class: 'btn btn-primary' %> <br/><br/>
     <div class="masonry">
         <% @pins.each do |pin| %>
           <div class="item">
@@ -16,5 +16,5 @@
   </div>
 </div> 
 <div class="center paginate">
-  <%= will_paginate @pins, :previous_label => 'Poprzednia strona', :next_label => "Następna strona", renderer: BootstrapPagination::Rails %>
+  <%= will_paginate @pins, :previous_label => 'Previous page', :next_label => "Next page", renderer: BootstrapPagination::Rails %>
 </div>

@@ -14,11 +14,10 @@
     <form class="navbar-form navbar-left">
         <div class="form-group">
           <%= search_form_for @q, url: search_pins_path, html: { method: :post } do |f| %>
-            <%= f.search_field :description_cont, type: "text", class: "form-control", placeholder: "Szukaj po opisie zdjęcia" %>
+            <%= f.search_field :description_cont, type: "text", class: "form-control", placeholder: "Search by description" %>
 
-            <%= f.submit 'Szukaj', class:"btn btn-default"%>
+            <%= f.submit 'Search', class:"btn btn-default"%>
           <% end %>
-
         </div>
 
       </form>
@@ -26,19 +25,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Strona główna', root_path%></li>
-        <li><%= link_to 'O mnie', home_about_path %></li>
-        <li><%= link_to 'Galeria obrazów', pins_path %></li>
+        <li><%= link_to 'Main', root_path%></li>
+        <li><%= link_to 'About', home_about_path %></li>
+        <li><%= link_to 'Images gallery', pins_path %></li>
 
 
 
         <% if user_signed_in? %>
-        <li><%= link_to 'Moje tablice', boards_path %></li>
-        <li><%= link_to 'Edycja profilu', edit_user_registration_path %></li>
-        <li><%= link_to 'Wylogowanie', destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to 'My boards', boards_path %></li>
+        <li><%= link_to 'Profile', edit_user_registration_path %></li>
+        <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
         <% else %>
-        <li><%= link_to 'Logowanie', new_user_session_path %></li>
-        <li><%= link_to 'Rejestracja', new_user_registration_path %></li>
+        <li><%= link_to 'Sign in', new_user_session_path %></li>
+        <li><%= link_to 'Sign up', new_user_registration_path %></li>
         <% end %>
 
       </ul>

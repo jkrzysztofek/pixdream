@@ -13,10 +13,10 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
   }
+
   img {
     display: inline-block;
     width: 100%;
@@ -28,3 +28,5 @@
     height: 50%;
     margin-left: 25%;
   }
+
+  @media (max-width: 768px) { .item {padding: 0px;} }

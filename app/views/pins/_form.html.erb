@@ -14,19 +14,19 @@
 
   
   <div class="form-group">
-    <%= f.label :image, "Obrazek" %>
+    <%= f.label :image, "Image" %>
     <%= f.file_field :image, class: "form-control", required: true %>
   </div>
   <div class="form-group">
-    <%= f.label :description, "Opis" %><br>
+    <%= f.label :description %><br>
     <%= f.text_field :description, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :board, "Wybierz tablicę" %>
+    <%= f.label :board, "Choose board" %>
     <option selected><%= f.collection_select(:board_id, current_user.boards, :id, :name, { include_blank: true }, {class: "form-control"}) %></option>
   </div>
   <div class="actions">
-    <%= f.submit "Dodaj obrazek", class: "btn btn-primary" %>
+    <%= f.submit "Add image", class: "btn btn-primary" %>
   </div>
 
 <% end %>
