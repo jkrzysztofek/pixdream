@@ -1,39 +1,37 @@
 # README
 
-# Project Title
+# PixDream
 
-This project is based on tutorial from John Elder's book: "Learn Ruby on Rails For Web Development" and I am going to make it look like Pinterest.com ;)
+App for storing images and organizing them into collections https://pixdream.herokuapp.com/
 
 ## Getting Started
 
 Things you may want to cover:
 
-* Ruby version 2.3.3
+* Ruby version 2.5.1
 
-* Rails version 5.1.6
+* Rails version 5.2.1
 
 * Database initialization: run rake db:migrate
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-* Ruby version 2.3.3
-
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Download zip package and install required gems by running:
 
 ```
-Give the example
+bundle install
 ```
 
-And repeat
+Initalize database:
 
 ```
-until finished
+rake db:migrate
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Finnaly run rails server
+
+```
+rails server
+```
+
+You can find app now by pointing your browser to http://localhost:3000.
