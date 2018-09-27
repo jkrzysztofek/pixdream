@@ -14,8 +14,6 @@
    padding-right: 0px;
 }
 
-
-
 // carousel styles:
  .item {
   width:100%;
@@ -27,6 +25,7 @@
 .carousel-control.left, .carousel-control.right { 
   background-image: none; 
 } 
+
 .carousel-indicators { 
   margin-bottom: 30px;
 }
@@ -49,7 +48,6 @@
   p {font-size:18px; } 
   a.btn {font-size:8px; }
 }
-
 
 // pagination and buttons styles
 .pagination > li > {
@@ -102,13 +100,13 @@
   background-color: #FFFFFF; 
   border-color: #AAA8B3; 
 } 
- 
+
 .btn { 
   color: #505050; 
   background-color: #FFFFFF; 
   border-color: #AAA8B3; 
 } 
- 
+
 .btn:hover, 
 .btn:focus, 
 .btn:active, 
@@ -119,13 +117,13 @@
   background-color: #DBDBDB; 
   border-color: #AAA8B3; 
 } 
- 
+
 .btn:active, 
 .btn.active, 
 .open .dropdown-toggle.btn { 
   background-image: none; 
 } 
- 
+
 .btn.disabled, 
 .btn[disabled], 
 fieldset[disabled] .btn, 
@@ -144,7 +142,7 @@ fieldset[disabled] .btn.active {
   background-color: #FFFFFF; 
   border-color: #AAA8B3; 
 } 
- 
+
 .btn .badge { 
   color: #FFFFFF; 
   background-color: #828282; 
@@ -155,5 +153,3 @@ fieldset[disabled] .btn.active {
   background-color: #FFFFFF; 
   border-color: #AAA8B3;       
 }
-
-
