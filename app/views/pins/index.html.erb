@@ -3,6 +3,15 @@
 <div class="container">
   <div class="jumbotron">
     <h2 class="center">Images gallery</h2>
+
+    <div class="form-group">
+          <%= search_form_for @q, url: search_pins_path, html: { method: :post } do |f| %>
+            <%= f.search_field :description_cont, type: "text", class: "form-control", placeholder: "Search by description" %>
+
+            <%= f.submit 'Search', class:"btn btn-default"%>
+          <% end %>
+        </div>
+        
     <%= link_to 'Add image', new_pin_path, class: 'btn btn-primary' %> <br/><br/>
     <div class="masonry">
         <% @pins.each do |pin| %>
