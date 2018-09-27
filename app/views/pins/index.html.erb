@@ -3,10 +3,11 @@
 <div class="container">
   <div class="jumbotron">
     <h2 class="center">Images gallery</h2>
+    <br />
 
-    <div class="form-group">
+    <div class="form-inline center">
           <%= search_form_for @q, url: search_pins_path, html: { method: :post } do |f| %>
-            <%= f.search_field :description_cont, type: "text", class: "form-control", placeholder: "Search by description" %>
+            <%= f.search_field :description_cont, type: "text", class: "form-control", placeholder: "Search by description " %>
 
             <%= f.submit 'Search', class:"btn btn-default"%>
           <% end %>
@@ -27,3 +28,5 @@
 <div class="center paginate">
   <%= will_paginate @pins, :previous_label => 'Previous page', :next_label => "Next page", renderer: BootstrapPagination::Rails %>
 </div>
+
+

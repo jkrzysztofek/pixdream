@@ -1,7 +1,6 @@
 @import "bootstrap";
 @import "bootstrap-sprockets";
 
-
 // general styles:
 .description {
   text-align: center;
@@ -14,6 +13,8 @@
    padding-left:0px;
    padding-right: 0px;
 }
+
+
 
 // carousel styles:
  .item {
@@ -97,13 +98,13 @@
 }
 
 .btn-sample { 
-  color: #595252; 
+  color: #505050; 
   background-color: #FFFFFF; 
   border-color: #AAA8B3; 
 } 
  
 .btn { 
-  color: #828282; 
+  color: #505050; 
   background-color: #FFFFFF; 
   border-color: #AAA8B3; 
 } 
@@ -114,7 +115,7 @@
 .btn.active, 
 .btn.visited,
 .open .dropdown-toggle.btn { 
-  color: #828282; 
+  color: #505050; 
   background-color: #DBDBDB; 
   border-color: #AAA8B3; 
 } 

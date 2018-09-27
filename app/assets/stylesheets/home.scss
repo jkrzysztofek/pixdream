@@ -7,7 +7,7 @@ html {
   }
 
 body {
-    color: #00000091;
+    color: #505050;
     margin-bottom: 60px;
 }
 .center{
@@ -19,17 +19,24 @@ body {
 .container {
     margin-top: 0px;
     padding-top: 0px;
+}
 
+h2, h3 {
+    color: #505050;
+  }
+
+p {
+    font-size: 16px;
 }
 
 a:link,
 a:visited,
 a:active {
-    color: rgb(77, 70, 70);
+    color: #505050;
 }
 
 a:hover {
-    color: rgb(129, 124, 128);
+    color: #505050;
     text-decoration: none;
 }
 

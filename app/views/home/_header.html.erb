@@ -11,16 +11,7 @@
       <%= link_to 'PixDream', root_path, class: 'navbar-brand' %>
     </div>
 
-    <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <%= search_form_for @q, url: search_pins_path, html: { method: :post } do |f| %>
-            <%= f.search_field :description_cont, type: "text", class: "form-control", placeholder: "Search by description" %>
-
-            <%= f.submit 'Search', class:"btn btn-default"%>
-          <% end %>
-        </div>
-
-      </form>
+   
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
