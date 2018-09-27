@@ -1,21 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Opis:</strong>
+  <strong>Description:</strong>
   <%= @board.description %>
 </p>
 
 <p>
-  <%= link_to 'Edycja', edit_board_path(@board), class: 'btn btn-primary btn-sm' %>
-  <%= link_to 'Usuń', @board, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary btn-sm' %>
-  <%= link_to 'Wstecz', boards_path, class: 'btn btn-primary btn-sm'%>
+  <%= link_to 'Edit', edit_board_path(@board), class: 'btn btn-primary btn-sm' %>
+  <%= link_to 'Delete', @board, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary btn-sm' %>
+  <%= link_to 'Back', boards_path, class: 'btn btn-primary btn-sm'%>
 </p>
 
 
 <div class="continer">
   <div class="jumbotron">
     <p class="center">
-      <strong>Obrazy w Twojej tablicy:</strong><br /><br />
+      <strong>Images in your board:</strong><br /><br />
       <%= link_to 'Add image', new_pin_path, class: 'btn btn-primary btn-sm' %> <br/><br/>
     </p>
 
