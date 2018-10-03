@@ -1,0 +1,50 @@
+{
+  "resource": "Pin",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/api/v1/pins?include=images",
+  "description": "Index",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/pins?include=images",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "include": "images"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 129,\n    \"user_id\": 139,\n    \"description\": \"Description\",\n    \"image_file_name\": null,\n    \"created_at\": \"2018-10-02T13:49:25.076Z\",\n    \"pin_url\": \"/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b911dc45b3aa923ab5fcef0c0446644b4777a27a/example.jpg\",\n    \"user\": {\n      \"id\": 139,\n      \"email\": \"email2@example.com\"\n    }\n  },\n  {\n    \"id\": 128,\n    \"user_id\": 138,\n    \"description\": \"Description\",\n    \"image_file_name\": null,\n    \"created_at\": \"2018-10-02T13:49:25.009Z\",\n    \"pin_url\": \"/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--342953775514600c171e124252989a2aba0dca98/example.jpg\",\n    \"user\": {\n      \"id\": 138,\n      \"email\": \"email1@example.com\"\n    }\n  }\n]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"b448689ec337aaf641ec459a55118afe\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "0ddd039d-5276-49b4-a9f6-1bfa72dcc260",
+        "X-Runtime": "0.100405",
+        "Content-Length": "677"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

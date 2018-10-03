@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       resources :pins
       resources :boards
     end
-  end  
+  end
 
   resources :boards
   devise_for :users

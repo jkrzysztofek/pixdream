@@ -42,18 +42,21 @@ gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'rspec_api_documentation'
+gem 'apitome'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 3.8'
   gem 'selenium-webdriver'
+  gem 'pry'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'pry'
   gem 'web-console', '>= 3.3.0'
 end
 

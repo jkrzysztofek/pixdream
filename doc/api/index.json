@@ -1,0 +1,24 @@
+{
+  "resources": [
+    {
+      "name": "Pin",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Index",
+          "link": "pin/index.json",
+          "groups": "all",
+          "route": "/api/v1/pins?include=images",
+          "method": "get"
+        },
+        {
+          "description": "Show",
+          "link": "pin/show.json",
+          "groups": "all",
+          "route": "/api/v1/pins/:pin_id",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}
